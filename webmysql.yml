@@ -1,0 +1,22 @@
+---
+- hosts: test-servers
+  become: true
+
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      name: httpd
+      state: latest
+
+- hosts: test-servers
+  become: true
+
+  tasks:
+  - name: ensure mysql is at the latest version
+    yum:
+      name: mysql
+      state: latest
+  - name: ensure that mysql is started
+    service:
+      name: mysqld
+      state: started

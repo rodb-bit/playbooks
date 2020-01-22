@@ -1,0 +1,8 @@
+---
+- name: Start Httpd servers
+    hosts: test-servers
+    tasks:
+      service:
+        name=test-servers 
+        state=started
+        enabled=yes

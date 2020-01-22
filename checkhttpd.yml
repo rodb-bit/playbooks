@@ -1,0 +1,8 @@
+---
+- hosts: test-servers
+  become: yes
+  tasks:
+  - name: ensure httpd is started
+    service:
+      name: httpd
+      state: started
