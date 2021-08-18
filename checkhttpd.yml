@@ -1,5 +1,5 @@
 ---
-- hosts: test-servers
+- hosts: chefnode.mytank.ca
   become: yes
   tasks:
   - name: ensure httpd is started
